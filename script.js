@@ -75,7 +75,6 @@ function setupEventListeners() {
     const secretBtn = document.getElementById('secretBtn');
     if (secretBtn) {
         secretBtn.addEventListener('click', () => {
-            // Simulate an API call that reveals the flag in the Network tab
             fetch('data:text/plain;charset=utf-8,' + encodeURIComponent('{"flag":"flag{hidden_endpoint}","message":"You found the secret endpoint!"}'))
                 .then(() => {
                     console.log('%c🚩 Secret Flag: flag{hidden_endpoint}', 'color: #4CAF50; font-size: 16px; font-weight: bold;');
@@ -95,7 +94,6 @@ function setupResetButton() {
 }
 
 function createModal() {
-    // Create modal HTML
     const modalHTML = `
         <div id="resetModal" class="modal-overlay">
             <div class="modal-content">
@@ -111,7 +109,6 @@ function createModal() {
     
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     
-    // Setup modal event listeners
     document.getElementById('confirmReset').addEventListener('click', confirmReset);
     document.getElementById('cancelReset').addEventListener('click', hideResetModal);
     document.getElementById('resetModal').addEventListener('click', (e) => {
@@ -130,13 +127,8 @@ function hideResetModal() {
 }
 
 function confirmReset() {
-    // Clear all localStorage
     localStorage.clear();
-    
-    // Hide modal
     hideResetModal();
-    
-    // Reload page to reset UI
     setTimeout(() => {
         location.reload();
     }, 300);
@@ -175,13 +167,11 @@ function loadSolvedChallenges() {
 }
 
 function setupChallenge3() {
-    // Check if cookie challenge was already set up
     if (!localStorage.getItem('ctf_initialized')) {
         localStorage.setItem('ctf_initialized', 'true');
     }
 }
 
-// Easter egg: Reset progress (for testing)
 console.log('%cCTF Platform', 'color: #667eea; font-size: 24px; font-weight: bold;');
 console.log('%cType resetProgress() in console for quick reset', 'color: #888; font-size: 12px;');
 
