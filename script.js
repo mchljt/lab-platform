@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateScore();
     loadSolvedChallenges();
     setupEventListeners();
-    setupChallenge3();
     setupResetButton();
     createModal();
 });
@@ -61,27 +60,6 @@ function setupEventListeners() {
             }
         });
     });
-    
-    // Challenge 3: Cookie button
-    const getCookieBtn = document.getElementById('getCookie');
-    if (getCookieBtn) {
-        getCookieBtn.addEventListener('click', () => {
-            localStorage.setItem('secret_flag', 'flag{cookie_monster}');
-            alert('Cookie set! Check your browser\'s Local Storage (F12 > Application/Storage tab)');
-        });
-    }
-    
-    // Challenge 5: Secret API button
-    const secretBtn = document.getElementById('secretBtn');
-    if (secretBtn) {
-        secretBtn.addEventListener('click', () => {
-            fetch('data:text/plain;charset=utf-8,' + encodeURIComponent('{"flag":"flag{hidden_endpoint}","message":"You found the secret endpoint!"}'))
-                .then(() => {
-                    console.log('%c🚩 Secret Flag: flag{hidden_endpoint}', 'color: #4CAF50; font-size: 16px; font-weight: bold;');
-                    alert('Check the browser Console (F12) for a secret message!');
-                });
-        });
-    }
 }
 
 function setupResetButton() {
@@ -163,12 +141,6 @@ function loadSolvedChallenges() {
     
     if (solvedChallenges.length === Object.keys(challenges).length) {
         document.getElementById('completionMessage').classList.add('show');
-    }
-}
-
-function setupChallenge3() {
-    if (!localStorage.getItem('ctf_initialized')) {
-        localStorage.setItem('ctf_initialized', 'true');
     }
 }
 
