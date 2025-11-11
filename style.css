@@ -447,4 +447,33 @@ h1 {
         margin: 20px;
         max-width: calc(100% - 40px);
     }
+
+/* Locked challenge styling */
+.challenge-card.locked {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.challenge-card.locked::before {
+    content: '🔒 Complete previous challenges to unlock';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.challenge-card.locked .challenge-footer {
+    filter: blur(5px);
+}
+
 }
