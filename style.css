@@ -76,9 +76,6 @@ h1 {
     font-weight: bold;
 }
 
-/* ========================================
-   SECTION STYLING - THIS IS THE NEW PART!
-   ======================================== */
 .sections-container {
     display: flex;
     flex-direction: column;
@@ -118,7 +115,6 @@ h1 {
     margin-right: 10px;
     font-size: 1.1em;
 }
-/* ======================================== */
 
 .challenges-grid {
     display: grid;
@@ -143,6 +139,39 @@ h1 {
 .challenge-card.solved {
     background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
     border: 2px solid #4CAF50;
+}
+
+/* Locked challenge styling - MOVED HERE, OUTSIDE MEDIA QUERY */
+.challenge-card.locked {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.challenge-card.locked::before {
+    content: '🔒 Complete previous challenges to unlock';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+.challenge-card.locked .challenge-footer {
+    filter: blur(5px);
+}
+
+.challenge-card.locked .challenge-body {
+    filter: blur(3px);
 }
 
 .challenge-header {
@@ -447,33 +476,4 @@ h1 {
         margin: 20px;
         max-width: calc(100% - 40px);
     }
-
-/* Locked challenge styling */
-.challenge-card.locked {
-    opacity: 0.5;
-    pointer-events: none;
-    position: relative;
-}
-
-.challenge-card.locked::before {
-    content: '🔒 Complete previous challenges to unlock';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: center;
-    z-index: 10;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.challenge-card.locked .challenge-footer {
-    filter: blur(5px);
-}
-
 }
