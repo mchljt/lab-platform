@@ -488,7 +488,7 @@
       <section id="thor-lite" class="challenge-section">
         <h2>THOR Lite + Investigation</h2>
         <div class="challenges-grid">
-          
+    
           <div class="challenge-card" data-challenge="thor1">
             <div class="challenge-header">
               <h3>Command Execution</h3>
@@ -522,8 +522,7 @@
             </div>
           </div>
 
-
-          <div class="challenge-card" data-challenge="thor3">
+          <div class="challenge-card locked" data-challenge="thor3" data-requires="thor1,thor2">
             <div class="challenge-header">
               <h3>Are we cooked?</h3>
               <span class="difficulty medium">Medium</span>
@@ -538,7 +537,7 @@
             </div>
           </div>
 
-          <div class="challenge-card" data-challenge="thor4">
+          <div class="challenge-card locked" data-challenge="thor4" data-requires="thor1,thor2">
             <div class="challenge-header">
               <h3>bing bong</h3>
               <span class="difficulty medium">Medium</span>
@@ -554,8 +553,8 @@
               <div class="result"></div>
             </div>
           </div>
-
-          <div class="challenge-card" data-challenge="thor5">
+      
+          <div class="challenge-card locked" data-challenge="thor5" data-requires="thor3,thor4">
             <div class="challenge-header">
               <h3>???</h3>
               <span class="difficulty hard">Hard</span>
@@ -572,8 +571,8 @@
               <div class="result"></div>
             </div>
           </div>
-
-          <div class="challenge-card" data-challenge="thor6">
+      
+          <div class="challenge-card locked" data-challenge="thor6" data-requires="thor5">
             <div class="challenge-header">
               <h3>Defender what have u been doing?</h3>
               <span class="difficulty medium">Medium</span>
@@ -592,17 +591,17 @@
               <div class="result"></div>
             </div>
           </div>
-
-          <div class="challenge-card" data-challenge="thor7">
+      
+          <div class="challenge-card locked" data-challenge="thor7" data-requires="thor5,thor6">
             <div class="challenge-header">
               <h3>I spy with my little eye</h3>
               <span class="difficulty medium">Medium</span>
             </div>
             <div class="challenge-body">
-              <p>Files were being verified during the update.</p>
+              <p>4 files were being verified during the update.</p>
               <p>The malware type associated with the mpcache file is a form of <strong>spyware</strong>.</p>
-              <p>Research and identify the file containing anti-spyware signatures.</p>
-              <p>Submit the complete filename.</p>
+              <p>One of the verified files contain anti-spyware signatures.</p>
+              <p>Submit the complete filename of this file.</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -610,10 +609,10 @@
               <div class="result"></div>
             </div>
           </div>
-
-          <div class="challenge-card" data-challenge="thor8">
+      
+          <div class="challenge-card locked" data-challenge="thor8" data-requires="thor6,thor7">
             <div class="challenge-header">
-              <h3> OUR HYPOTHESIS</h3>
+              <h3>OUR HYPOTHESIS</h3>
               <span class="difficulty hard">Hard</span>
             </div>
             <div class="challenge-body">
@@ -627,8 +626,8 @@
               <div class="result"></div>
             </div>
           </div>
-
-          <div class="challenge-card" data-challenge="thor9">
+      
+          <div class="challenge-card locked" data-challenge="thor9" data-requires="thor8">
             <div class="challenge-header">
               <h3>Proving our hypothesis😎</h3>
               <span class="difficulty easy">Easy</span>
@@ -645,8 +644,8 @@
               <div class="result"></div>
             </div>
           </div>
-
-          <div class="challenge-card" data-challenge="thor10">
+      
+          <div class="challenge-card locked" data-challenge="thor10" data-requires="thor9">
             <div class="challenge-header">
               <h3>CONCLUSION 🥳</h3>
               <span class="difficulty easy">Easy</span>
@@ -662,13 +661,10 @@
               <div class="result"></div>
             </div>
           </div>
-
+      
         </div>
       </section>
 
-
-        </div>
-      </section>
 
       <!-- VSCMount SECTION -->
       <section id="eztools" class="challenge-section">
