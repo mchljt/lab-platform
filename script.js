@@ -141,6 +141,20 @@ function loadSolvedChallenges() {
     }
 }
 
+function checkAndUnlockChallenges() {
+    document.querySelectorAll('.challenge-card.locked').forEach(card => {
+        const requires = card.dataset.requires;
+        if (requires) {
+            const requiredChallenges = requires.split(',');
+            const allCompleted = requiredChallenges.every(id => solvedChallenges.includes(id));
+            
+            if (allCompleted) {
+                card.classList.remove('locked');
+            }
+        }
+    });
+}
+
 function resetProgress() {
     localStorage.clear();
     location.reload();
