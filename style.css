@@ -172,12 +172,12 @@ h1 {
 }
 
 .challenge-card.locked .challenge-footer {
-    filter: blur(5px);
+    filter: blur(10px);
     user-select: none;
 }
 
 .challenge-card.locked .challenge-body {
-    filter: blur(3px);
+    filter: blur(10px);
     user-select: none;
 }
 
