@@ -129,6 +129,27 @@ function createModal() {
     });
 }
 
+// Close completion modal when clicking outside
+document.addEventListener('DOMContentLoaded', () => {
+    updateScore();
+    loadSolvedChallenges();
+    checkAndUnlockChallenges();
+    setupEventListeners();
+    setupResetButton();
+    createModal();
+    
+    // Add click handler for completion message
+    const completionMsg = document.getElementById('completionMessage');
+    if (completionMsg) {
+        completionMsg.addEventListener('click', (e) => {
+            if (e.target.id === 'completionMessage') {
+                completionMsg.classList.remove('show');
+            }
+        });
+    }
+});
+
+
 function showResetModal() {
     document.getElementById('resetModal').classList.add('show');
 }
