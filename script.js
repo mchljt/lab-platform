@@ -33,9 +33,7 @@ function launchConfetti() {
 }
 
 let solvedChallenges = JSON.parse(localStorage.getItem('solvedChallenges')) || [];
-let totalScore = parseInt(localStorage.getItem('totalScore')) || 0;
 
-// SINGLE DOMContentLoaded listener
 document.addEventListener('DOMContentLoaded', () => {
     updateScore();
     loadSolvedChallenges();
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupResetButton();
     createModal();
     
-    // Add click handler for completion message
     const completionMsg = document.getElementById('completionMessage');
     if (completionMsg) {
         completionMsg.addEventListener('click', (e) => {
@@ -79,9 +76,7 @@ function setupEventListeners() {
             if (userHash === challenges[challengeId]) {
                 if (!solvedChallenges.includes(challengeId)) {
                     solvedChallenges.push(challengeId);
-                    totalScore += challengePoints[challengeId];
                     localStorage.setItem('solvedChallenges', JSON.stringify(solvedChallenges));
-                    localStorage.setItem('totalScore', totalScore.toString());
                     updateScore();
                 }
                 
@@ -91,7 +86,6 @@ function setupEventListeners() {
 
                 checkAndUnlockChallenges();
                 
-                // CHECK FOR 26 COMPLETED CHALLENGES
                 if (solvedChallenges.length === 26) {
                     setTimeout(() => {
                         launchConfetti();
@@ -183,7 +177,6 @@ function loadSolvedChallenges() {
         }
     });
     
-    // CHECK FOR 26 COMPLETED CHALLENGES
     if (solvedChallenges.length === 26) {
         document.getElementById('completionMessage').classList.add('show');
         launchConfetti();
