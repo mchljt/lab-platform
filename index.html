@@ -56,6 +56,7 @@
               <h3>1. Mounting Snapshot</h3>
             </div>
             <div class="challenge-body">
+              <p>Refer to <strong>Section 1.1</strong> of the Lab Instructions and Mount <code>labvhd</code>.</p>
               <p>How many volumes have been mounted?</p>
             </div>
             <div class="challenge-footer">
@@ -215,9 +216,7 @@
               
             </div>
             <div class="challenge-body">
-              <p>The following command has already been executed for you.😁 </p>
-              <p><code><strong>.\hayabusa-3.7.0-win-x64.exe csv-timeline –d </strong>"C:\Users\Administrator\Desktop\Lab\KAPE Target Outputs\2025-11-28T091517_kape_target\G\Windows\System32\winevt\logs"
-                <strong> -o </strong>"C:\Users\Administrator\Desktop\Lab\Hayabusa Timeline\timeline.csv"</code></p>
+              <p>Hayabusa has already been executed for you. 😁</p>
               <p>To clear this challenge, simply enter the word: <code>hayabusa</code></p>
             </div>
             <div class="challenge-footer">
@@ -233,8 +232,8 @@
             </div>
             <div class="challenge-body">
               <p>Logs have been cleared! View the Hayabusa timeline in Timeline Explorer to identify how many logs were cleared in total.</p>
-              <p><strong>Hint:</strong>Refer to Section 4.2 Grouping in the Lab Instructions document</p>
-              <p>Path to Hayabusa Timeline: C:\Users\Administrator\Desktop\Lab\Hayabusa Timeline\timeline.csv</p>
+              <p><strong>Hint: </strong>Refer to Section 4.2 of the Lab Instructions document</p> 
+              <p><strong>Path to Hayabusa Timeline:</strong> <code>C:\Users\Administrator\Desktop\Lab\Hayabusa Timeline\timeline.csv</code></p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -266,8 +265,8 @@
             </div>
             <div class="challenge-body">
               <p>Apply filters and groupings to identify the user ID of the user who cleared the logs.</p>
-              <p><strong>Hint:</strong>View the <strong>Details</strong> column of the timeline.</p>
-              <p>Note: You can double-click into a cell in Timeline Explorer to copy its contents!</p>
+              <p><strong>Hint: </strong>View the <strong>Details</strong> column of the timeline.</p>
+              <p><strong>Note:</strong> You can double-click into a cell in Timeline Explorer to copy its contents!</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -281,8 +280,8 @@
             </div>
             <div class="challenge-body">
               <p>A process cleared the logs. Find its process ID.</p>
-              <p><strong>Hint:</strong>View the <strong>Details</strong> column of the timeline.</p>
-              <p>Note: You can double-click into a cell in Timeline Explorer to copy its contents!</p>
+              <p><strong>Hint: </strong>View the <strong>Details</strong> column of the timeline.</p>
+              <p><strong>Note:</strong> You can double-click into a cell in Timeline Explorer to copy its contents!</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -336,9 +335,9 @@
             </div>
             <div class="challenge-body">
               <p>Hindsight has already been executed 😁 </p>
-              <p>I'm feeling a bit naughty today.😈 </p>
+              <p>We're feeling a bit naughty today. 😈 </p>
               <p>Let's look at what <strong>cyberarkadm</strong> has been doing on the web.</p>
-              <p>Double-click the Hindsight output at C:\Users\Administrator\Desktop\Lab\Hindsight Outputs\Hindsight Report (2025-12-02T08-59-28).xlsx to open it in LibreOffice. </p>
+              <p>Double-click the Hindsight output at <code>C:\Users\Administrator\Desktop\Lab\Hindsight Outputs\Hindsight Report (2025-12-02T08-59-28).xlsx</code> to open it in LibreOffice. </p>
               <p>Enter the first URL entry in the Hindsight output</p>
             </div>
             <div class="challenge-footer">
@@ -440,8 +439,7 @@
               
             </div>
             <div class="challenge-body">
-              <p>The following command has already been executed:</p>
-              <p><code>thor64-lite.exe <strong>-a Filescan--intense --norescontrol --cross-platform -p</strong> G:\ <strong>-e</strong> "C:\Users\Administrator\Desktop\Lab\Thor Lite Outputs"</code></p>
+              <p>THOR Lite has already been executed for you.😁 </p>
               <p>To clear this challenge, simply enter the word: <code>thor</code></p>
             </div>
             <div class="challenge-footer">
@@ -505,7 +503,7 @@
               <h3>15. MPDetection</h3>
             </div>
             <div class="challenge-body">
-              <p>Navigate to the following directory: <code>G:\ProgramData\Microsoft\Windows Defender\Support</code></p>
+              <p>In File Explorer, navigate to the following directory: <code>G:\ProgramData\Microsoft\Windows Defender\Support</code></p>
               <p>This directory contains Windows Defender activity logs.</p>
               <p>Determining if the mpcache file was created due to a detection allows us to identify if this VM has been compromised.</p>
               <p>View the <strong>MPDetection-20250712-060749.txt</strong> file using Notepad++. Did Defender detect any malicious files? (y/n)</p>
@@ -525,10 +523,10 @@
             <div class="challenge-body">
               <p>We still need to determine how the mpcache file was created.</p>
               <p>In the same directory, view the <strong>MPLog-20250712-060749.txt</strong> file using Notepad++. This file contains all Defender activity.</p>
-              <p>Viewing this file allows us to identify when the mpcache file was created, and the events leading up to its creation.</p>
-              <p>Search for (Ctrl + F) <code>mpcache-33F7A7FF51EC99E22C2A7716C8CF60E6973026F8.bin</code>within MPLog. Prior to its creation, Defender initiated an update.</p>
-              <p>What is the timestamp of this update? Answer in <strong>HH:MM:SS</strong></p>
-              <p><strong>Note: </strong>The timestamp is in UTC. Convert it to SGT (</p>
+              <p>Viewing this file allows us to identify when the mpcache file was created.</p>
+              <p>Search for (Ctrl + F) <code>mpcache-33F7A7FF51EC99E22C2A7716C8CF60E6973026F8.bin</code>within the <strong>MPLog</strong> file.</p>
+              <p>What is the timestamp of the mpcache file creation? Answer in <strong>HH:MM:SS</strong></p>
+              <p><strong>Note: </strong>The timestamp is in UTC. Convert it to SGT (+ 8 hours).</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -731,40 +729,40 @@
               
             </div>
             <div class="challenge-body">
-              <p>Examine the SYSTEM registry hive and identify the Start value of the Volume Shadow Copy Service registry key.</p>
+              <p>Load the SYSTEM registry hive and identify the Start value of the Volume Shadow Copy Service registry key.</p>
+              <p><strong>Note: </strong>After loading the SYSTEM registry hive in Registry Explorer, expand <code>ROOT</code>, navigate to and click <code>\SYSTEM\ControlSet001\Services\VSS</code></p>
               <p>This Start value represents a setting.</p>
               <table>
-            <thead>
-              <tr>
-                <th>Value</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>0</td>
-                <td>Boot</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>System</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Automatic</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Manual</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Disabled</td>
-              </tr>
-            </tbody>
-          </table>
+                  <thead>
+                  <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0</td>
+                    <td>Boot</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>System</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Automatic</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Disabled</td>
+                  </tr>
+                </tbody>
+              </table>
               <p><strong>Note: </strong>The SYSTEM registry hive is found in <code>C:\Users\Administrator\Desktop\Lab\KAPE Target Outputs\2025-11-28T091517_kape_target\G\Windows\System32\config</code></p>
-              <p><strong>Note: </strong>After loading the SYSTEM registry hive in Registry Explorer, expand ROOT, navigate to and click <code>\SYSTEM\ControlSet001\Services\VSS</code></p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -851,7 +849,7 @@
               
             </div>
             <div class="challenge-body">
-              <p>Use PhotoRec to recover deleted files. What are the 2 filetypes that PhotoRec managed to recover?</p>
+              <p>Use PhotoRec to recover deleted files <strong>(Refer to Section 10 of the Lab Instructions Document)</strong>. What are the 2 filetypes that PhotoRec managed to recover?</p>
               <p>Answer in alphabetical order with an underscore separating each filetype.</p>
               <p><strong>Example:</strong> docx_pptx</p>
               <p><strong>Note: </strong>You do not have to wait for the PhotoRec recovery to complete. ;)</p>
