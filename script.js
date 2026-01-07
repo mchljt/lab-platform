@@ -86,7 +86,7 @@ function setupEventListeners() {
 
                 checkAndUnlockChallenges();
                 
-                if (solvedChallenges.length === 24) {
+                if (solvedChallenges.length === 1) {
                     setTimeout(() => {
                         launchConfetti();
                         document.getElementById('completionMessage').classList.add('show');
@@ -177,7 +177,7 @@ function loadSolvedChallenges() {
         }
     });
     
-    if (solvedChallenges.length === 24) {
+    if (solvedChallenges.length === 1) {
         document.getElementById('completionMessage').classList.add('show');
         launchConfetti();
     }
